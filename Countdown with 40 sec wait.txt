@@ -1,0 +1,29 @@
+// Try edit message
+
+var t_time=2
+var e_time=0
+var r_time
+
+function makeAlert(){ 
+  e_time+=1
+  r_time = t_time-e_time
+  var minutes = Math.floor(r_time / 60);
+  var seconds = r_time - minutes * 60;
+  if(r_time>=0)
+    console.log(minutes,seconds)
+  else{
+    console.log("Wait 40 secs")
+    clearInterval(time)
+    handleBreak()
+    }
+};
+
+function handleBreak(){
+  setTimeout(()=>{
+  t_time=3
+  e_time=0
+  time = setInterval(makeAlert, 1000);
+}, 40000);
+}
+
+time = setInterval(makeAlert, 1000);

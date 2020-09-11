@@ -1,0 +1,3 @@
+use any npm module of countdown timer
+when an exercise time has elapsed, fire a function
+ which pauses the music for 40 seconds (you can use set timeout to resume)

@@ -1,0 +1,26 @@
+let selected=[]
+let dict = [["Planks","30"],["Pushups","120"],["Squats","120"],
+              ["Situps","180"],["Lunges","120"],["Mountain Climbers","30"]
+              ,["Benchpress","180"],["Crunches","180"],["Pullups","30"]]
+
+
+  var list = [{ Name: "Planks",Duration:60}, { Name: "Pushups",Duration:120},
+  { Name: "Squats",Duration:180},{ Name: "Situps",Duration:120},{ Name: "Lunges",Duration:120},
+  { Name: "Mountain Climbers", Duration:60},{ Name: "Benchpress",Duration:180},
+  { Name: "Crunches",Duration:180},{Name:"Pullups",Duration:60}  ]
+
+fun=()=>{
+  
+  for(var i =0;i<5;++i){
+  let j = (Math.floor(Math.random() * Math.floor(list.length) ))
+
+  //console.log(list[j])
+  selected.push(list[j])
+  list.splice(j, 1)
+
+  //console.log(j)
+  }
+    console.log(selected)
+
+}
+fun()
